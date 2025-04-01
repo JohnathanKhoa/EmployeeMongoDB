@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: employee-service
+  mvc:
+    servlet:
+      path: /employee-service
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  data:
+    mongodb:
+      uri: mongodb+srv://johnathannguyen:14yc7hRmaNYvmNix@hrcluster.pz2jf.mongodb.net/?retryWrites=true&w=majority&appName=HRCluster
+      database: employee
+
+
+server:
+  port: 8787
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
